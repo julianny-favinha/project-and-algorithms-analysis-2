@@ -1,10 +1,10 @@
 # Copyright 2014, Gurobi Optimization, Inc.
 
 PLATFORM = linux64
-INC      = ../../include/
+INC      = /opt/gurobi602/linux64/include/
 CPP      = g++
 CARGS    = -m64 -g
-CPPLIB   = -L../../lib/ -lgurobi_c++ -lgurobi60
+CPPLIB   = /opt/gurobi602/linux64/lib/ -lgurobi_c++ -lgurobi60
 
 all: gurobi_c++
 
@@ -13,7 +13,7 @@ run: run_c++
 run_c++: run_gurobi_c++
 
 gurobi_c++: gurobi.cpp
-	$(CPP) $(CARGS) -o gurobi_teste gurobi.cpp -I$(INC) $(CPPLIB) -lpthread -lm
+	$(CPP) $(CARGS) -o gurobi_teste gurobi.cpp -I$(INC) $(CPPLIB) -lm
 
 run_gurobi_c++: gurobi_teste
 	./gurobi_teste
