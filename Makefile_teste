@@ -1,0 +1,7 @@
+CC = g++
+FLAGS = -Wall -std=c++11
+
+PROGRAMS = gurobi.cpp
+
+all: gurobi.cpp
+	$(CC) $(FLAGS) -o gurobi gurobi.cpp
