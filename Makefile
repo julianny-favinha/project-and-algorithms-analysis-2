@@ -6,17 +6,17 @@ CPP      = g++
 CARGS    = -m64 -g
 CPPLIB   = -L../../lib/ -lgurobi_c++ -lgurobi60
 
-all: diet_c++
+all: gurobi_c++
 
 run: run_c++
 
-run_c++: run_diet_c++
+run_c++: run_gurobi_c++
 
-diet_c++: ../c++/diet_c++.cpp
-	$(CPP) $(CARGS) -o diet_c++ ../c++/diet_c++.cpp -I$(INC) $(CPPLIB) -lpthread -lm
+gurobi_c++: gurobi.cpp
+	$(CPP) $(CARGS) -o gurobi_teste gurobi.cpp -I$(INC) $(CPPLIB) -lpthread -lm
 
-run_diet_c++: diet_c++
-	./diet_c++
+run_gurobi_c++: gurobi_teste
+	./gurobi_teste
 
 clean:
 	rm -rf *.o *_c *_c++ *.class *.log *.rlp *.lp *.bas *.ilp
