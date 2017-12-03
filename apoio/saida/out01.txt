@@ -1,0 +1,37 @@
+Academic license - for non-commercial use only
+Optimize a model with 18 rows, 19 columns and 54 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 8e+01]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 3e+00]
+Presolve removed 12 rows and 12 columns
+Presolve time: 0.01s
+Presolved: 6 rows, 7 columns, 18 nonzeros
+
+Iteration    Objective       Primal Inf.    Dual Inf.      Time
+       0    2.6000000e+01   6.000000e+00   0.000000e+00      0s
+       4    8.4000000e+01   0.000000e+00   0.000000e+00      0s
+
+Solved in 4 iterations and 0.01 seconds
+Optimal objective  8.400000000e+01
+X_[0,1] 1
+X_[0,2] 1
+X_[0,3] 1
+X_[1,5] 1
+X_[1,6] 0
+X_[2,6] 1
+X_[3,4] 1
+X_[3,6] 0
+X_[4,3] 0
+X_[4,7] 1
+X_[4,9] 0
+X_[5,8] 0
+X_[5,9] 1
+X_[6,8] 0
+X_[6,9] 1
+X_[6,1] 0
+X_[7,9] 1
+X_[7,6] 0
+X_[8,9] 0
+Latencia Total: 84
