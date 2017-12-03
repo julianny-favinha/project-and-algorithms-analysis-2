@@ -1,4 +1,8 @@
+#include <vector>
+#include <tr1/unordered_map>
 #include "gurobi_c++.h"
+
+
 using namespace std;
 
 int main(int argc, char *argv[]) {
@@ -9,7 +13,7 @@ int main(int argc, char *argv[]) {
         int nodes, arcs, source, target, k;
         cin >> nodes >> arcs >> source >> target >> k;
         
-        vector< unordered_map<int, GRBVar> > graph(nodes);
+        vector< std::tr1::unordered_map<int, GRBVar> > graph(nodes);
         
         char varname[10];
         for(int i = 0; i < arcs; i++) {
@@ -54,6 +58,7 @@ int main(int argc, char *argv[]) {
             for(auto i: graph) {
                 if (i.find(v) != i.end())
                     in_v += i[v];
+            }
             
             model.addConstr(in_v <= 1 , "c1");
         }
